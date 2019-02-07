@@ -49,7 +49,7 @@ end
 
 def run(songs)
   help
-  # user_command = ""
+  user_command = ""
   until user_command == "exit"
   puts "Please enter a command: "
   user_command = gets.chomp
