@@ -47,20 +47,42 @@ def exit_jukebox
   puts "Goodbye"
 end
 
-def run
+# def run
+#   help
+#   user_command = ""
+#   until user_command == "exit"
+#   puts "Please enter a command: "
+#   user_command = gets.chomp
+# case user_command
+# when "list" then list(songs)
+# when "play" then play(songs)
+# when "help" then help
+# when "exit" then exit_jukebox
+# else
+#   puts "Invalid entry"
+#     end
+#   end
+# end
+# run
+def run(songs)
+  #this method is the same as in jukebox.rb
   help
-  user_command = ""
-  until user_command == "exit"
-  puts "Please enter a command: "
-  user_command = gets.chomp
-case user_command
-when "list" then list(songs)
-when "play" then play(songs)
-when "help" then help
-when "exit" then exit_jukebox
-else
-  puts "Invalid entry"
+  puts "Please enter a command:"
+  response = gets.chomp
+  unless response == "exit"
+    case response
+      when "help"
+      help
+      when "list"
+      list(songs)
+      when "play"
+      play(songs)
+      else
+      puts "Invalid input, please try again"
     end
+    run(songs)
   end
+  exit_jukebox
 end
-run
+
+run(songs)
