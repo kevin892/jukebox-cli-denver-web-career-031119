@@ -63,26 +63,3 @@ else
     end
   end
 end
-
-
-
-# def run(songs)
-#   #this method is the same as in jukebox.rb
-#   help
-#   puts "Please enter a command:"
-#   response = gets.chomp
-#   unless response == "exit"
-#     case response
-#       when "help"
-#       help
-#       when "list"
-#       list(songs)
-#       when "play"
-#       play(songs)
-#       else
-#       puts "Invalid input, please try again"
-#     end
-#     run(songs)
-#   end
-#   exit_jukebox
-# end
