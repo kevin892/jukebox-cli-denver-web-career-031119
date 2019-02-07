@@ -49,6 +49,7 @@ end
 
 def run
   help
+  user_command = ""
   puts "Please enter a command: "
   user_command = gets.to_s.chomp
   until user_command == "exit"
