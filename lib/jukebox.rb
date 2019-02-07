@@ -56,7 +56,7 @@ case user_command
 when "list" then list(songs)
 when "play" then play(songs)
 when "help" then help
-when "exit" then exit
+when "exit" then exit_jukebox
 else "Invalid entry"
     end
   end
