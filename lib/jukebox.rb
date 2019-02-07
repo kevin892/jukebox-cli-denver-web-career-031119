@@ -50,8 +50,8 @@ end
 def run
   help
   puts "Please enter a command: "
-  user_command = gets.chomp
-  while user_command != "exit"
+  user_command = gets.to_i.chomp
+  until user_command == "exit"
 case user_command
 when "list" then list(songs)
 when "play" then play(songs)
