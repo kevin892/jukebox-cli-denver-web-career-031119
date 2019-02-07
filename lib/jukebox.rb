@@ -52,7 +52,7 @@ def run(songs)
   # user_command = ""
   until user_command == "exit"
   puts "Please enter a command: "
-  user_command = gets.to.int.chomp
+  user_command = gets.to.i.chomp
 case user_command
 when "list" then list(songs)
 when "play" then play(songs)
