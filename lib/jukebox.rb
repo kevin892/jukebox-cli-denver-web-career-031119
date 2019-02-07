@@ -50,15 +50,16 @@ end
 def run
   help
   user_command = ""
-  puts "Please enter a command:"
-  user_command = gets.to_s.chomp
   until user_command == "exit"
+  puts "Please enter a command: "
+  user_command = gets.chomp
 case user_command
 when "list" then list(songs)
 when "play" then play(songs)
 when "help" then help
 when "exit" then exit_jukebox
-else "Invalid entry"
+else
+  puts "Invalid entry"
     end
   end
 end
